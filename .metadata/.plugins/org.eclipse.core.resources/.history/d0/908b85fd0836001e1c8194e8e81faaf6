@@ -1,0 +1,14 @@
+package com.springcore.ci;
+
+public class Certificate {
+	
+	private String cTitleString;
+
+	public Certificate(String cTitleString) {
+		super();
+		this.cTitleString = cTitleString;
+	}
+	
+	
+
+}

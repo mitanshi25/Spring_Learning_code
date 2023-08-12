@@ -1,0 +1,41 @@
+package com.learning.hibernate;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+
+
+@SuppressWarnings("deprecation")
+public class Embaded {
+	
+	public static void main(String[] args) {
+		
+		
+		Configuration cfg = new Configuration();
+		cfg.configure("hibernate.cfg.xml");
+		SessionFactory factory = cfg.buildSessionFactory();	
+		
+		Student s1 = new Student();
+		s1.setId(235);
+		s1.setName("Rani");
+		s1.setCity("Agra");
+		
+		
+		Certificate certificate1 = new Certificate();
+		certificate1.setCourse("java");
+		certificate1.setDuration("2 months");
+		
+		s1.setCerti(certificate1);
+		
+		Session session = factory.openSession();
+        
+        session.beginTransaction();
+        
+        session.save(s1);
+//        session.save(certificate);
+        
+        session.getTransaction().commit();
+        session.close();
+	}
+
+}

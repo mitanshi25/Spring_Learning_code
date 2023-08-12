@@ -1,0 +1,13 @@
+package com.spring.jdbc.dao;
+
+import com.spring.jdbc.entity.Student;
+
+public class studentDaoImpl implements StudentDao{
+
+	@Override
+	public int insert(Student student) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

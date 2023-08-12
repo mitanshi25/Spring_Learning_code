@@ -1,0 +1,11 @@
+package com.map;
+
+import jakarta.persistence.Entity;
+
+@Entity
+public class Answer {
+	
+	private int answerId;
+	private String answer;
+
+}

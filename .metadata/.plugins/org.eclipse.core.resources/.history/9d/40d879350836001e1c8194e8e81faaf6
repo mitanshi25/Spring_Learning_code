@@ -1,0 +1,24 @@
+package com.springcore.ci;
+
+public class Person {
+	
+	private int id;
+	private String pName;
+	
+	//constructor
+	public Person(int id, String pName) {
+		super();
+		this.id = id;
+		this.pName = pName;
+	}
+
+	@Override
+	public String toString() {
+		return this.id + " : " + this.pName;
+	}
+	
+	
+	
+	
+
+}

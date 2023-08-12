@@ -1,0 +1,11 @@
+package com.learning.hibernate;
+
+import jakarta.persistence.Embeddable;
+
+@Embeddable
+public class Certificate {
+	
+	private String course;
+	private String duration;
+
+}

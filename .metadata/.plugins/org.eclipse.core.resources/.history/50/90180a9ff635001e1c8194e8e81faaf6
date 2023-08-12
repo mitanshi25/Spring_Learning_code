@@ -1,0 +1,12 @@
+package understanding;
+
+public class Student {
+	
+	private Teacher teacher;
+
+	public Student(Teacher teacher) {
+		// TODO Auto-generated constructor stub
+		
+		this.teacher = teacher;
+	}
+}

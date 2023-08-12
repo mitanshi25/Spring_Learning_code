@@ -1,0 +1,8 @@
+package understanding;
+
+public class Student {
+
+	public Student(Teacher teacher) {
+		// TODO Auto-generated constructor stub
+	}
+}

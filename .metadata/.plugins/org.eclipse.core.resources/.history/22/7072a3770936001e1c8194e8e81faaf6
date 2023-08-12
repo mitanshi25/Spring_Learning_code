@@ -1,0 +1,32 @@
+package com.springcore.ci;
+
+import java.util.List;
+
+//import java.security.cert.Certificate;
+
+public class Person {
+	
+	private int id;
+	private String pName;
+	private Certificate certificate;
+	private List<String> pCity;
+	
+	//constructor
+	public Person(int id, String pName, Certificate certi, List<String> pCity) {
+		
+		super();
+		this.id = id;
+		this.pName = pName;
+		this.certificate = certi;
+	}
+
+	@Override
+	public String toString() {
+		return this.id + " : " + this.pName + " " + this.certificate;
+	}
+	
+	
+	
+	
+
+}

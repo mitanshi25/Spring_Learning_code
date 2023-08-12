@@ -1,0 +1,43 @@
+package com.spring.jdbc.dao;
+
+import javax.management.loading.PrivateClassLoader;
+
+import org.springframework.jdbc.core.JdbcTemplate;
+
+//import javax.management.loading.PrivateClassLoader;
+
+import com.spring.jdbc.entity.Student;
+
+public class studentDaoImpl implements StudentDao{
+	
+	private JdbcTemplate jdbcTemplate;
+
+	@Override
+	public int insert(Student student) {
+		
+		String query = "insert into student (id, name, city) values(?,?,?)";
+		
+		int r  = this.jdbcTemplate.update(query, student.getId(), student.getName(), student.getCity());
+		
+		
+		return r;
+		
+	}
+
+	public JdbcTemplate getJdbcTemplate() {
+		return jdbcTemplate;
+	}
+
+	public void setJdbcTemplate(JdbcTemplate jdbcTemplate) {
+		this.jdbcTemplate = jdbcTemplate;
+	}
+
+	@Override
+	public int change(Student student) {
+		
+		String query ="update student set name=? , city=?, where id=?";
+		int r = jdbcTemplate.update(query, student.getName(), student.getCity(), student.getId());
+		return r;
+	}
+
+}
